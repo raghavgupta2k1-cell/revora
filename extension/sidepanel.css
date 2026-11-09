@@ -1,0 +1,418 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 280px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f5f9;
+    background: #101525;
+}
+
+.app-container {
+    padding: 22px 18px;
+    width: 100%;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #4775ff, #7547e8);
+    color: white;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: #8997b2;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #a5b4cc;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+}
+
+.status-dot.connected {
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.status-dot.disconnected {
+    background: #ef4444;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    padding: 17px;
+    margin-bottom: 20px;
+    border: 1px solid #293750;
+    border-radius: 14px;
+    background: #1b263b;
+}
+
+.section-label,
+.result-label {
+    color: #91a2bf;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.product-card h2 {
+    margin: 12px 0 7px;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.product-caption {
+    margin: 0;
+    color: #8493ad;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ANALYZE SECTION */
+
+.analyze-section {
+    margin-bottom: 24px;
+}
+
+.analyze-section h2 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.analyze-section > p {
+    color: #98a6bf;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.analyze-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(110deg, #315fe5, #6246dc);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.analyze-btn:hover {
+    filter: brightness(1.13);
+    transform: translateY(-1px);
+}
+
+.analyze-btn:disabled {
+    opacity: .6;
+    cursor: wait;
+    transform: none;
+}
+
+.button-icon {
+    margin-right: 7px;
+    font-size: 18px;
+}
+
+.status-message {
+    min-height: 15px;
+    margin-top: 10px;
+    color: #8fa2c1;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+
+/* RESULTS */
+
+.results-section {
+    margin-top: 25px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.results-heading h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.result-tag {
+    padding: 5px 8px;
+    border-radius: 20px;
+    background: #143a30;
+    color: #4ade80;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* GENUINE AND FAKE CARDS */
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+}
+
+.result-card {
+    padding: 15px;
+    border: 1px solid #293750;
+    border-radius: 13px;
+    background: #1b263b;
+}
+
+.result-card h3 {
+    margin: 12px 0 5px;
+    font-size: 28px;
+}
+
+.genuine-card h3,
+.genuine-card .result-count {
+    color: #4ade80;
+}
+
+.fake-card h3,
+.fake-card .result-count {
+    color: #f87171;
+}
+
+.result-count {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* TOTAL REVIEWS */
+
+.total-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 16px;
+    border: 1px solid #293750;
+    border-radius: 13px;
+    background: #1b263b;
+}
+
+.total-card h3 {
+    margin: 9px 0 0;
+    font-size: 25px;
+}
+
+.total-icon {
+    font-size: 32px;
+    color: #7c9cff;
+}
+
+
+/* PROGRESS BAR */
+
+.progress-card {
+    margin-top: 12px;
+    padding: 15px;
+    border: 1px solid #293750;
+    border-radius: 13px;
+    background: #1b263b;
+}
+
+.progress-bar {
+    display: flex;
+    width: 100%;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #334155;
+}
+
+.genuine-bar {
+    width: 0%;
+    background: #22c55e;
+    transition: width .4s;
+}
+
+.fake-bar {
+    width: 0%;
+    background: #ef4444;
+    transition: width .4s;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+#genuineLegend {
+    color: #4ade80;
+}
+
+#fakeLegend {
+    color: #f87171;
+}
+
+
+/* INDIVIDUAL REVIEWS */
+
+.individual-section {
+    margin-top: 23px;
+}
+
+.individual-section h3 {
+    margin: 0 0 13px;
+    font-size: 15px;
+}
+
+.review-card {
+    margin-bottom: 11px;
+    padding: 14px;
+    border: 1px solid #293750;
+    border-radius: 12px;
+    background: #1b263b;
+}
+
+.review-title {
+    margin-bottom: 8px;
+    color: #f1f5f9;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.review-text {
+    margin-bottom: 12px;
+    color: #a5b4cc;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.review-label {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.review-label.genuine {
+    background: #143a30;
+    color: #4ade80;
+}
+
+.review-label.fake {
+    background: #451f2b;
+    color: #f87171;
+}
+
+.review-label.neutral {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+.review-meta {
+    margin-top: 9px;
+    color: #8998b1;
+    font-size: 10px;
+}
+
+
+/* DOWNLOAD BUTTON */
+
+.download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: 1px solid #466ce0;
+    border-radius: 11px;
+    background: #1b2d55;
+    color: #dbe7ff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.download-btn:hover {
+    background: #29447e;
+}
+
+.download-btn span {
+    font-size: 18px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid #293750;
+    color: #687995;
+    font-size: 10px;
+    text-align: center;
+}

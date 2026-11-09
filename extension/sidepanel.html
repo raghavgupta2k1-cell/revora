@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVORA - Review Analyzer</title>
+    <link rel="stylesheet" href="sidepanel.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">R</div>
+                <div>
+                    <h1>REVORA</h1>
+                    <p>AI-POWERED REVIEW INTELLIGENCE</p>
+                </div>
+            </div>
+
+            <div class="connection">
+                <span class="status-dot" id="connectionDot"></span>
+                <span id="connectionText">Connecting</span>
+            </div>
+        </header>
+
+
+        <!-- CURRENT PRODUCT -->
+        <section class="product-card">
+            <div class="section-label">CURRENT FLIPKART PRODUCT</div>
+            <h2 id="pageStatus">Checking product...</h2>
+            <p class="product-caption">Product detected from your active Flipkart tab</p>
+        </section>
+
+
+        <!-- ANALYZE SECTION -->
+        <section class="analyze-section">
+            <h2>Analyze Product Reviews</h2>
+            <p>Discover potentially fake and genuine customer reviews using AI.</p>
+
+            <button id="analyzeBtn" class="analyze-btn">
+                <span class="button-icon">⌕</span>
+                Analyze Reviews
+            </button>
+
+            <p id="statusMessage" class="status-message">
+                Your local REVORA backend must be running.
+            </p>
+        </section>
+
+
+        <!-- RESULTS -->
+        <section id="results" class="results-section" hidden>
+
+            <div class="results-heading">
+                <h2>Analysis Results</h2>
+                <span class="result-tag">COMPLETED</span>
+            </div>
+
+            <!-- GENUINE AND FAKE CARDS -->
+            <div class="result-grid">
+
+                <div class="result-card genuine-card">
+                    <p class="result-label">GENUINE REVIEWS</p>
+                    <h3 id="genuinePercent">0%</h3>
+                    <p id="genuineCount" class="result-count">0 Sahi</p>
+                </div>
+
+                <div class="result-card fake-card">
+                    <p class="result-label">FAKE REVIEWS</p>
+                    <h3 id="fakePercent">0%</h3>
+                    <p id="fakeCount" class="result-count">0 Fake</p>
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL REVIEWS -->
+            <div class="total-card">
+                <div>
+                    <p class="result-label">TOTAL REVIEWS ANALYZED</p>
+                    <h3 id="totalReviews">0</h3>
+                </div>
+                <div class="total-icon">◎</div>
+            </div>
+
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-card">
+                <div class="progress-bar">
+                    <div id="genuineBar" class="genuine-bar"></div>
+                    <div id="fakeBar" class="fake-bar"></div>
+                </div>
+
+                <div class="progress-labels">
+                    <span id="genuineLegend">0% Genuine</span>
+                    <span id="fakeLegend">0% Fake</span>
+                </div>
+            </div>
+
+
+            <!-- INDIVIDUAL REVIEWS -->
+            <div class="individual-section">
+                <h3>Individual Review Predictions</h3>
+                <div id="reviewList"></div>
+            </div>
+
+
+            <!-- DOWNLOAD REPORT -->
+            <button id="downloadBtn" class="download-btn">
+                <span>↓</span>
+                Download Report
+            </button>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            REVORA · AI-powered product review analysis
+        </footer>
+
+    </div>
+
+    <script src="sidepanel.js"></script>
+
+</body>
+</html>

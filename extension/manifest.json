@@ -1,0 +1,39 @@
+
+{
+  "manifest_version": 3,
+  "name": "REVORA - Review Analyzer",
+  "version": "1.0.0",
+  "description": "Analyze Flipkart product reviews for potentially fake and genuine reviews.",
+
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://www.flipkart.com/*",
+    "http://127.0.0.1:5000/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "action": {
+    "default_title": "Open REVORA"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.flipkart.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
